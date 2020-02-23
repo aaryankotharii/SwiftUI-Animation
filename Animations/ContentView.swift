@@ -13,6 +13,7 @@ struct ContentView: View {
         HStack {
             Text("Hello, World!")
             Image(systemName: "person.fill")
+            Text("yo")
         }
     }
 }
