@@ -9,12 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var animationAmount : CGFloat = 1
     var body: some View {
-        HStack {
-            Text("Hello, World!")
-            Image(systemName: "person.fill")
-            Text("yo")
+        Button("Tap me"){
+            self.animationAmount *= 1.2
         }
+        .padding(50)
+        .background(Color.red)
+        .foregroundColor(Color.white)
+        .clipShape(Circle())
+        .scaleEffect(animationAmount)
+        .animation(.easeOut)
     }
 }
 
